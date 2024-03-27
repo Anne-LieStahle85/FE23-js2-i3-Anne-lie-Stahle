@@ -16,7 +16,7 @@ async function searchAndUpdate(event: Event){
     productsContainer.innerHTML = '';
     displayProducts(searchResults);
 
-    const searchInput: HTMLInputElement | null = document.getElementById('searchProduct') as HTMLInputElement;
+    const searchInput: HTMLInputElement = document.getElementById('searchProduct') as HTMLInputElement;
     if(searchInput) {
         searchInput.value = '';
     }
@@ -24,7 +24,7 @@ async function searchAndUpdate(event: Event){
 
 document.getElementById('searchForm')?.addEventListener('submit', searchAndUpdate);
 
-document.querySelector('h1')?.addEventListener('click', async () =>{
+document.querySelector('h1')?.addEventListener('click', () =>{
     location.reload();
 })
 

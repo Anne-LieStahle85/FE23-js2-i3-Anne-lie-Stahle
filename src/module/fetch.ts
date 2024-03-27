@@ -8,7 +8,7 @@ export type Products = {
     images: string[],
 }
 
-async function productList(data: { products: any[] }): Promise<Products[]> {
+function productList(data: { products: any[] }): Products[] {
     return data.products.map((product: any) => ({
         title: product.title,
         description: product.description,

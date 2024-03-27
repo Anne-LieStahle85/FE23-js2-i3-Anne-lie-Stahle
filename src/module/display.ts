@@ -1,7 +1,7 @@
 import { Products } from "./fetch.ts"; 
 
 export function displayProducts(products: Products[]): void { 
-    const productCardContainer: HTMLElement | null = document.getElementById('productCard'); 
+    const productCardContainer = document.getElementById('productCard'); 
     if (!productCardContainer) return;
 
     if (products.length === 0) {
